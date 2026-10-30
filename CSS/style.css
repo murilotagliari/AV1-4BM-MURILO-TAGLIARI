@@ -347,52 +347,6 @@ a {
     color: var(--navy);
 }
 
-.quiz-panel,
-.info-panel {
-    padding: clamp(22px, 4vw, 42px);
-    background: white;
-    border-radius: 22px;
-    box-shadow: var(--shadow);
-    height: 100%;
-}
-
-.quiz-option {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 14px 18px;
-    border: 2px solid #e1e6f1;
-    background: white;
-    border-radius: 14px;
-    margin: 10px 0;
-    font-weight: 800;
-    color: var(--ink);
-}
-
-.quiz-option:hover:not(:disabled) {
-    border-color: var(--blue);
-    background: #f4f7ff;
-}
-
-.quiz-option.correct {
-    border-color: #2f9e44;
-    background: #e9f8ed;
-}
-
-.quiz-option.wrong {
-    border-color: var(--red);
-    background: #fff0f0;
-}
-
-.progress {
-    height: 10px;
-    border-radius: 20px;
-}
-
-.progress-bar {
-    background: var(--red);
-}
-
 .stat-box {
     background: white;
     border-radius: 18px;
@@ -482,6 +436,7 @@ footer p {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
     width: 100%;
+    margin-top: 30px;
 }
 
 #pokemonGrid > * {
