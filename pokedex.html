@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -67,19 +66,432 @@
             </div>
 
             <div id="pokemonInfo" class="mb-4"></div>
-            <div id="pokemonGrid" class="row g-4"></div>
+            
+<div id="pokemonGrid" class="row g-4">
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="bulbasaur" data-types="grass poison">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 001</div>
+                <h3 class="pokemon-name h4">Bulbasaur</h3>
+                <span class="type-badge type-grass">Planta</span>
+                <span class="type-badge type-poison">Venenoso</span>
+                <p class="text-secondary small mt-3">Um Pokémon que cresce absorvendo energia solar pela semente em suas costas.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(1)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="ivysaur" data-types="grass poison">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png" alt="Ivysaur">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 002</div>
+                <h3 class="pokemon-name h4">Ivysaur</h3>
+                <span class="type-badge type-grass">Planta</span>
+                <span class="type-badge type-poison">Venenoso</span>
+                <p class="text-secondary small mt-3">A planta em suas costas cresce à medida que acumula energia.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(2)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="venusaur" data-types="grass poison">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="Venusaur">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 003</div>
+                <h3 class="pokemon-name h4">Venusaur</h3>
+                <span class="type-badge type-grass">Planta</span>
+                <span class="type-badge type-poison">Venenoso</span>
+                <p class="text-secondary small mt-3">Sua enorme flor absorve energia solar.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(3)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="charmander" data-types="fire">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 004</div>
+                <h3 class="pokemon-name h4">Charmander</h3>
+                <span class="type-badge type-fire">Fogo</span>
+                <p class="text-secondary small mt-3">A chama em sua cauda indica sua energia vital.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(4)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="charmeleon" data-types="fire">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png" alt="Charmeleon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 005</div>
+                <h3 class="pokemon-name h4">Charmeleon</h3>
+                <span class="type-badge type-fire">Fogo</span>
+                <p class="text-secondary small mt-3">Um Pokémon de fogo que luta com grande intensidade.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(5)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="charizard" data-types="fire flying">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="Charizard">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 006</div>
+                <h3 class="pokemon-name h4">Charizard</h3>
+                <span class="type-badge type-fire">Fogo</span>
+                <span class="type-badge type-flying">Voador</span>
+                <p class="text-secondary small mt-3">Voa pelo céu e lança chamas extremamente quentes.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(6)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="squirtle" data-types="water">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 007</div>
+                <h3 class="pokemon-name h4">Squirtle</h3>
+                <span class="type-badge type-water">Água</span>
+                <p class="text-secondary small mt-3">Usa seu casco para se proteger e dispara água pela boca.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(7)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="wartortle" data-types="water">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png" alt="Wartortle">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 008</div>
+                <h3 class="pokemon-name h4">Wartortle</h3>
+                <span class="type-badge type-water">Água</span>
+                <p class="text-secondary small mt-3">Um Pokémon aquático ágil, com uma cauda que lembra uma nuvem.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(8)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="blastoise" data-types="water">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png" alt="Blastoise">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 009</div>
+                <h3 class="pokemon-name h4">Blastoise</h3>
+                <span class="type-badge type-water">Água</span>
+                <p class="text-secondary small mt-3">Dispara jatos de água poderosos pelos canhões de seu casco.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(9)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="pikachu" data-types="electric">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 025</div>
+                <h3 class="pokemon-name h4">Pikachu</h3>
+                <span class="type-badge type-electric">Elétrico</span>
+                <p class="text-secondary small mt-3">Armazena eletricidade nas bochechas e libera poderosos choques.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(25)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="dugtrio" data-types="ground">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/51.png" alt="Dugtrio">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 051</div>
+                <h3 class="pokemon-name h4">Dugtrio</h3>
+                <span class="type-badge type-ground">Terrestre</span>
+                <p class="text-secondary small mt-3">Três Pokémon unidos que escavam túneis rapidamente.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(51)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="meowth" data-types="normal">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png" alt="Meowth">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 052</div>
+                <h3 class="pokemon-name h4">Meowth</h3>
+                <span class="type-badge type-normal">Normal</span>
+                <p class="text-secondary small mt-3">Adora objetos brilhantes e moedas.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(52)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="machop" data-types="fighting">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/66.png" alt="Machop">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 066</div>
+                <h3 class="pokemon-name h4">Machop</h3>
+                <span class="type-badge type-fighting">Lutador</span>
+                <p class="text-secondary small mt-3">Treina constantemente para aumentar sua força física.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(66)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="machoke" data-types="fighting">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/67.png" alt="Machoke">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 067</div>
+                <h3 class="pokemon-name h4">Machoke</h3>
+                <span class="type-badge type-fighting">Lutador</span>
+                <p class="text-secondary small mt-3">Possui músculos poderosos e grande resistência.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(67)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="machamp" data-types="fighting">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png" alt="Machamp">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 068</div>
+                <h3 class="pokemon-name h4">Machamp</h3>
+                <span class="type-badge type-fighting">Lutador</span>
+                <p class="text-secondary small mt-3">Usa seus quatro braços para executar golpes impressionantes.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(68)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="gastly" data-types="ghost poison">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png" alt="Gastly">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 092</div>
+                <h3 class="pokemon-name h4">Gastly</h3>
+                <span class="type-badge type-ghost">Fantasma</span>
+                <span class="type-badge type-poison">Venenoso</span>
+                <p class="text-secondary small mt-3">É formado principalmente por gás e pode atravessar paredes.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(92)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="haunter" data-types="ghost poison">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png" alt="Haunter">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 093</div>
+                <h3 class="pokemon-name h4">Haunter</h3>
+                <span class="type-badge type-ghost">Fantasma</span>
+                <span class="type-badge type-poison">Venenoso</span>
+                <p class="text-secondary small mt-3">Esconde-se nas sombras e assusta quem se aproxima.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(93)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="gengar" data-types="ghost poison">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png" alt="Gengar">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 094</div>
+                <h3 class="pokemon-name h4">Gengar</h3>
+                <span class="type-badge type-ghost">Fantasma</span>
+                <span class="type-badge type-poison">Venenoso</span>
+                <p class="text-secondary small mt-3">Adora se esconder nas sombras para surpreender os outros.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(94)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="eevee" data-types="normal">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 133</div>
+                <h3 class="pokemon-name h4">Eevee</h3>
+                <span class="type-badge type-normal">Normal</span>
+                <p class="text-secondary small mt-3">Pode evoluir para diferentes formas dependendo das condições.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(133)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="vaporeon" data-types="water">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png" alt="Vaporeon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 134</div>
+                <h3 class="pokemon-name h4">Vaporeon</h3>
+                <span class="type-badge type-water">Água</span>
+                <p class="text-secondary small mt-3">É capaz de se misturar à água e nadar com facilidade.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(134)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="jolteon" data-types="electric">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png" alt="Jolteon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 135</div>
+                <h3 class="pokemon-name h4">Jolteon</h3>
+                <span class="type-badge type-electric">Elétrico</span>
+                <p class="text-secondary small mt-3">Acumula eletricidade e dispara descargas rápidas.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(135)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="flareon" data-types="fire">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png" alt="Flareon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 136</div>
+                <h3 class="pokemon-name h4">Flareon</h3>
+                <span class="type-badge type-fire">Fogo</span>
+                <p class="text-secondary small mt-3">Armazena calor em seu corpo e pode liberar ar muito quente.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(136)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="espeon" data-types="psychic">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png" alt="Espeon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 196</div>
+                <h3 class="pokemon-name h4">Espeon</h3>
+                <span class="type-badge type-psychic">Psíquico</span>
+                <p class="text-secondary small mt-3">Usa seus poderes psíquicos para prever movimentos.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(196)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="umbreon" data-types="dark">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png" alt="Umbreon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 197</div>
+                <h3 class="pokemon-name h4">Umbreon</h3>
+                <span class="type-badge type-dark">Sombrio</span>
+                <p class="text-secondary small mt-3">Seus anéis brilham quando ele se prepara para agir à noite.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(197)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="leafeon" data-types="grass">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png" alt="Leafeon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 470</div>
+                <h3 class="pokemon-name h4">Leafeon</h3>
+                <span class="type-badge type-grass">Planta</span>
+                <p class="text-secondary small mt-3">Seu corpo realiza fotossíntese, como uma planta.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(470)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="glaceon" data-types="ice">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png" alt="Glaceon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 471</div>
+                <h3 class="pokemon-name h4">Glaceon</h3>
+                <span class="type-badge type-ice">Gelo</span>
+                <p class="text-secondary small mt-3">Consegue diminuir a temperatura ao seu redor e criar cristais de gelo.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(471)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-4 pokemon-item" data-name="sylveon" data-types="fairy">
+        <article class="card pokemon-card">
+            <div class="pokemon-art">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png" alt="Sylveon">
+            </div>
+            <div class="card-body">
+                <div class="pokemon-number">Nº 700</div>
+                <h3 class="pokemon-name h4">Sylveon</h3>
+                <span class="type-badge type-fairy">Fada</span>
+                <p class="text-secondary small mt-3">Usa suas fitas para transmitir tranquilidade e criar laços.</p>
+                <button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(700)">Ver detalhes</button>
+            </div>
+        </article>
+    </div>
+
+</div>
+
         </div>
     </section>
 </main>
 
 <footer>
     <div class="container">
-        <h3>🔴 PokéMundo</h3>
-        <p>Continue explorando o universo Pokémon!</p>
-        <p>Desenvolvido por Murilo Tagliari</p>
+        <p class="mb-0">🔴PokéMundo - Desenvolvido por Murilo Tagliari.</p>
     </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="JS/scrypt.js"></script>
 </body>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,88 +29,452 @@
 <main>
     <section class="page-banner">
         <div class="container">
-            <span class="small-label">CRIATURAS EXTRAORDINÁRIAS</span>
-            <h1>Lendários e míticos</h1>
-            <p>Descubra Pokémon raros, seus poderes e as histórias que os tornam especiais.</p>
+            <span class="small-label">BIBLIOTECA DE TREINADORES</span>
+            <h1>Pokémon Lendários</h1>
+            <p>Encontre seu Pokémon lendario favorito e descubra suas características.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <div class="row g-4">
-
-                <div class="col-sm-6 col-lg-4">
-                    <article class="legendary-card">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo">
-                        <span class="type-badge type-psychic">Psíquico</span>
-                        <h2 class="h4 fw-bold mt-3">Mewtwo</h2>
-                        <p>Um Pokémon criado por meio de experimentos genéticos, conhecido por seu enorme poder psíquico.</p>
-                    </article>
+            <div class="filter-bar mb-4">
+                <div class="row g-3">
+                    <div class="col-md-7">
+                        <label for="pokemonSearch" class="form-label fw-bold">Pesquisar por nome</label>
+                        <input type="search" id="pokemonSearch" class="form-control"
+                               placeholder="Ex.: Articuno, Zapdos, Moltres...">
+                    </div>
+                    <div class="col-md-5">
+                        <label for="typeFilter" class="form-label fw-bold">Filtrar por tipo</label>
+                        <select id="typeFilter" class="form-select">
+                            <option value="">Todos os tipos</option>
+                            <option value="normal">Normal</option>
+                            <option value="fire">Fogo</option>
+                            <option value="water">Água</option>
+                            <option value="electric">Elétrico</option>
+                            <option value="grass">Planta</option>
+                            <option value="fighting">Lutador</option>
+                            <option value="poison">Venenoso</option>
+                            <option value="flying">Voador</option>
+                            <option value="psychic">Psíquico</option>
+                            <option value="ghost">Fantasma</option>
+                            <option value="fairy">Fada</option>
+                        </select>
+                    </div>
                 </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <article class="legendary-card">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png" alt="Lugia">
-                        <span class="type-badge type-psychic">Psíquico</span>
-                        <span class="type-badge type-flying">Voador</span>
-                        <h2 class="h4 fw-bold mt-3">Lugia</h2>
-                        <p>Uma criatura lendária associada aos mares e às tempestades.</p>
-                    </article>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <article class="legendary-card">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png" alt="Ho-Oh">
-                        <span class="type-badge type-fire">Fogo</span>
-                        <span class="type-badge type-flying">Voador</span>
-                        <h2 class="h4 fw-bold mt-3">Ho-Oh</h2>
-                        <p>Uma ave lendária ligada ao arco-íris e a histórias de renascimento.</p>
-                    </article>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <article class="legendary-card">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png" alt="Rayquaza">
-                        <span class="type-badge type-dragon">Dragão</span>
-                        <span class="type-badge type-flying">Voador</span>
-                        <h2 class="h4 fw-bold mt-3">Rayquaza</h2>
-                        <p>Um poderoso Pokémon que vive nos céus e aparece nas lendas de Hoenn.</p>
-                    </article>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <article class="legendary-card">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png" alt="Mew">
-                        <span class="type-badge type-psychic">Psíquico</span>
-                        <h2 class="h4 fw-bold mt-3">Mew</h2>
-                        <p>Um Pokémon mítico extremamente raro, associado à origem de muitos Pokémon.</p>
-                    </article>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <article class="legendary-card">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png" alt="Articuno">
-                        <span class="type-badge type-ice">Gelo</span>
-                        <span class="type-badge type-flying">Voador</span>
-                        <h2 class="h4 fw-bold mt-3">Articuno</h2>
-                        <p>Uma das aves lendárias de Kanto, associada ao gelo e às baixas temperaturas.</p>
-                    </article>
-                </div>
-
+                <p id="resultCount" class="text-secondary small mt-3 mb-0" aria-live="polite"></p>
             </div>
-        </div>
-    </section>
-</main>
 
-<footer>
+            <div id="pokemonInfo" class="mb-4"></div>
+
+            <div class="row g-4" id="pokemonGrid">
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png" alt="Articuno">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 144</div>
+                            <h3 class="pokemon-name h4">Articuno</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-ice">Gelo</span>
+                                <span class="type-badge type-flying">Voador</span>
+                            </div>
+                            <p class="text-secondary small">Um lendário Pokémon de gelo que controla temperaturas congelantes e deixa rastros de cristais de gelo por onde passa.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png" alt="Zapdos">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 145</div>
+                            <h3 class="pokemon-name h4">Zapdos</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-electric">Elétrico</span>
+                                <span class="type-badge type-flying">Voador</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que controla raios e trovões. Dizem que aparece durante tempestades elétricas.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png" alt="Moltres">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 146</div>
+                            <h3 class="pokemon-name h4">Moltres</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-fire">Fogo</span>
+                                <span class="type-badge type-flying">Voador</span>
+                            </div>
+                            <p class="text-secondary small">Um lendário Pokémon de fogo que parece estar envolvido em chamas e ilumina o céu com seu brilho.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png" alt="Mew">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 151</div>
+                            <h3 class="pokemon-name h4">Mew</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-psychic">Psíquico</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon mítico extremamente raro, conhecido por sua capacidade de aprender praticamente qualquer movimento.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 150</div>
+                            <h3 class="pokemon-name h4">Mewtwo</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-psychic">Psíquico</span>
+                            </div>
+                            <p class="text-secondary small">Criado por experimentos científicos a partir do DNA de Mew, possui poderes psíquicos extraordinários.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png" alt="Ho-Oh">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 250</div>
+                            <h3 class="pokemon-name h4">Ho-Oh</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-fire">Fogo</span>
+                                <span class="type-badge type-flying">Voador</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que possui penas coloridas e é associado à felicidade e à ressurreição.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png" alt="Kyogre">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 382</div>
+                            <h3 class="pokemon-name h4">Kyogre</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-water">Água</span>
+                            </div>
+                            <p class="text-secondary small">Um lendário Pokémon capaz de expandir os oceanos e controlar grandes quantidades de água.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/383.png" alt="Groudon">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 383</div>
+                            <h3 class="pokemon-name h4">Groudon</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-ground">Terrestre</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que possui o poder de expandir os continentes e controlar a terra.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png" alt="Rayquaza">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 384</div>
+                            <h3 class="pokemon-name h4">Rayquaza</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-dragon">Dragão</span>
+                                <span class="type-badge type-flying">Voador</span>
+                            </div>
+                            <p class="text-secondary small">Vive na camada de ozônio e é conhecido por controlar os conflitos entre Kyogre e Groudon.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png" alt="Dialga">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 483</div>
+                            <h3 class="pokemon-name h4">Dialga</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-steel">Aço</span>
+                                <span class="type-badge type-dragon">Dragão</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que representa o tempo e possui o poder de controlá-lo.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png" alt="Palkia">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 484</div>
+                            <h3 class="pokemon-name h4">Palkia</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-water">Água</span>
+                                <span class="type-badge type-dragon">Dragão</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que representa o espaço e consegue distorcer suas dimensões.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png" alt="Giratina">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 487</div>
+                            <h3 class="pokemon-name h4">Giratina</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-ghost">Fantasma</span>
+                                <span class="type-badge type-dragon">Dragão</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário associado à antimatéria e ao Mundo Distorcido.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/643.png" alt="Reshiram">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 643</div>
+                            <h3 class="pokemon-name h4">Reshiram</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-dragon">Dragão</span>
+                                <span class="type-badge type-fire">Fogo</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que representa a verdade e possui poderes de fogo.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png" alt="Zekrom">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 644</div>
+                            <h3 class="pokemon-name h4">Zekrom</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-dragon">Dragão</span>
+                                <span class="type-badge type-electric">Elétrico</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que representa os ideais e controla poderosas descargas elétricas.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png" alt="Xerneas">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 716</div>
+                            <h3 class="pokemon-name h4">Xerneas</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-fairy">Fada</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que representa a vida e pode compartilhar energia vital.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/791.png" alt="Solgaleo">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 791</div>
+                            <h3 class="pokemon-name h4">Solgaleo</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-psychic">Psíquico</span>
+                                <span class="type-badge type-steel">Aço</span>
+                            </div>
+                            <p class="text-secondary small">Conhecido como a besta que devora o sol, possui uma ligação com outra dimensão.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/792.png" alt="Lunala">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 792</div>
+                            <h3 class="pokemon-name h4">Lunala</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-psychic">Psíquico</span>
+                                <span class="type-badge type-ghost">Fantasma</span>
+                            </div>
+                            <p class="text-secondary small">Conhecida como a besta que invoca a lua, consegue viajar entre dimensões.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png" alt="Necrozma">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 800</div>
+                            <h3 class="pokemon-name h4">Necrozma</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-psychic">Psíquico</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon misterioso que absorve luz para obter energia e assumir formas poderosas.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png" alt="Zacian">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 888</div>
+                            <h3 class="pokemon-name h4">Zacian</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-fairy">Fada</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário conhecido como o herói de muitos contos, capaz de lutar com uma espada.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png" alt="Zamazenta">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 889</div>
+                            <h3 class="pokemon-name h4">Zamazenta</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-fighting">Lutador</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário conhecido por sua defesa poderosa e por proteger a região de Galar.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/890.png" alt="Eternatus">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 890</div>
+                            <h3 class="pokemon-name h4">Eternatus</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-poison">Veneno</span>
+                                <span class="type-badge type-dragon">Dragão</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon de origem extraterrestre ligado ao fenômeno Dynamax e a uma enorme energia.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/897.png" alt="Spectrier">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 897</div>
+                            <h3 class="pokemon-name h4">Spectrier</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-ghost">Fantasma</span>
+                            </div>
+                            <p class="text-secondary small">Um cavalo fantasmagórico que se movimenta silenciosamente e possui grande velocidade.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/896.png" alt="Glastrier">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 896</div>
+                            <h3 class="pokemon-name h4">Glastrier</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-ice">Gelo</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon equino de gelo com força física impressionante e uma personalidade feroz.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <article class="card pokemon-card h-100">
+                        <div class="pokemon-art">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/898.png" alt="Calyrex">
+                        </div>
+                        <div class="card-body">
+                            <div class="pokemon-number">Nº 898</div>
+                            <h3 class="pokemon-name h4">Calyrex</h3>
+                            <div class="mb-3">
+                                <span class="type-badge type-psychic">Psíquico</span>
+                                <span class="type-badge type-grass">Planta</span>
+                            </div>
+                            <p class="text-secondary small">Um Pokémon lendário que já governou Galar e possui poderes de prever o futuro e controlar plantas.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
     <div class="container">
-        <h3>🔴 PokéMundo</h3>
-        <p>Descubra as lendas do universo Pokémon!</p>
-        <p>Desenvolvido por Murilo Tagliari</p>
+        <p class="mb-0">🔴PokéMundo - Desenvolvido por Murilo Tagliari.</p>
     </div>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="JS/scrypt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,36 +1,34 @@
-
-const pokemonList = [
-    { id: 1, name: "Bulbasaur", types: ["grass", "poison"], desc: "Um Pokémon que cresce absorvendo energia solar pela semente em suas costas." },
-    { id: 2, name: "Ivysaur", types: ["grass", "poison"], desc: "A planta em suas costas cresce à medida que acumula energia." },
+var pokemonList = [
+    { id: 1, name: "Bulbasaur", types: ["grass", "poison"], desc: "Um Pokémon que cresce absorvendo energia solar." },
+    { id: 2, name: "Ivysaur", types: ["grass", "poison"], desc: "A planta em suas costas cresce conforme acumula energia." },
     { id: 3, name: "Venusaur", types: ["grass", "poison"], desc: "Sua enorme flor absorve energia solar." },
     { id: 4, name: "Charmander", types: ["fire"], desc: "A chama em sua cauda indica sua energia vital." },
-    { id: 5, name: "Charmeleon", types: ["fire"], desc: "Um Pokémon de fogo que luta com grande intensidade." },
-    { id: 6, name: "Charizard", types: ["fire", "flying"], desc: "Voa pelo céu e lança chamas extremamente quentes." },
-    { id: 7, name: "Squirtle", types: ["water"], desc: "Usa seu casco para se proteger e dispara água pela boca." },
-    { id: 8, name: "Wartortle", types: ["water"], desc: "Um Pokémon aquático ágil, com uma cauda que lembra uma nuvem." },
-    { id: 9, name: "Blastoise", types: ["water"], desc: "Dispara jatos de água poderosos pelos canhões de seu casco." },
-    { id: 25, name: "Pikachu", types: ["electric"], desc: "Armazena eletricidade nas bochechas e libera poderosos choques." },
-    { id: 51, name: "Dugtrio", types: ["ground"], desc: "Três Pokémon unidos que escavam túneis rapidamente." },
+    { id: 5, name: "Charmeleon", types: ["fire"], desc: "Um Pokémon de fogo que luta com intensidade." },
+    { id: 6, name: "Charizard", types: ["fire", "flying"], desc: "Voa pelo céu e lança chamas quentes." },
+    { id: 7, name: "Squirtle", types: ["water"], desc: "Usa seu casco para se proteger." },
+    { id: 8, name: "Wartortle", types: ["water"], desc: "Um Pokémon aquático muito ágil." },
+    { id: 9, name: "Blastoise", types: ["water"], desc: "Dispara jatos de água pelos canhões de seu casco." },
+    { id: 25, name: "Pikachu", types: ["electric"], desc: "Armazena eletricidade nas bochechas." },
+    { id: 51, name: "Dugtrio", types: ["ground"], desc: "Três Pokémon que escavam túneis." },
     { id: 52, name: "Meowth", types: ["normal"], desc: "Adora objetos brilhantes e moedas." },
-    { id: 66, name: "Machop", types: ["fighting"], desc: "Treina constantemente para aumentar sua força física." },
-    { id: 67, name: "Machoke", types: ["fighting"], desc: "Possui músculos poderosos e grande resistência." },
-    { id: 68, name: "Machamp", types: ["fighting"], desc: "Usa seus quatro braços para executar golpes impressionantes." },
-    { id: 92, name: "Gastly", types: ["ghost", "poison"], desc: "É formado principalmente por gás e pode atravessar paredes." },
-    { id: 93, name: "Haunter", types: ["ghost", "poison"], desc: "Esconde-se nas sombras e assusta quem se aproxima." },
-    { id: 94, name: "Gengar", types: ["ghost", "poison"], desc: "Adora se esconder nas sombras para surpreender os outros." },
-    { id: 133, name: "Eevee", types: ["normal"], desc: "Pode evoluir para diferentes formas dependendo das condições." },
-    { id: 134, name: "Vaporeon", types: ["water"], desc: "É capaz de se misturar à água e nadar com facilidade." },
-    { id: 135, name: "Jolteon", types: ["electric"], desc: "Acumula eletricidade e dispara descargas rápidas." },
-    { id: 136, name: "Flareon", types: ["fire"], desc: "Armazena calor em seu corpo e pode liberar ar muito quente." },
-    { id: 196, name: "Espeon", types: ["psychic"], desc: "Usa seus poderes psíquicos para prever movimentos." },
-    { id: 197, name: "Umbreon", types: ["dark"], desc: "Seus anéis brilham quando ele se prepara para agir à noite." },
-    { id: 470, name: "Leafeon", types: ["grass"], desc: "Seu corpo realiza fotossíntese, como uma planta." },
-    { id: 471, name: "Glaceon", types: ["ice"], desc: "Consegue diminuir a temperatura ao seu redor e criar cristais de gelo." },
-    { id: 700, name: "Sylveon", types: ["fairy"], desc: "Usa suas fitas para transmitir tranquilidade e criar laços." }
+    { id: 66, name: "Machop", types: ["fighting"], desc: "Treina constantemente para aumentar sua força." },
+    { id: 67, name: "Machoke", types: ["fighting"], desc: "Possui músculos poderosos." },
+    { id: 68, name: "Machamp", types: ["fighting"], desc: "Usa seus quatro braços para lutar." },
+    { id: 92, name: "Gastly", types: ["ghost", "poison"], desc: "É formado principalmente por gás." },
+    { id: 93, name: "Haunter", types: ["ghost", "poison"], desc: "Esconde-se nas sombras." },
+    { id: 94, name: "Gengar", types: ["ghost", "poison"], desc: "Adora se esconder nas sombras." },
+    { id: 133, name: "Eevee", types: ["normal"], desc: "Pode evoluir para diferentes formas." },
+    { id: 134, name: "Vaporeon", types: ["water"], desc: "É capaz de se misturar à água." },
+    { id: 135, name: "Jolteon", types: ["electric"], desc: "Acumula eletricidade em seu corpo." },
+    { id: 136, name: "Flareon", types: ["fire"], desc: "Armazena calor em seu corpo." },
+    { id: 196, name: "Espeon", types: ["psychic"], desc: "Usa poderes psíquicos para prever movimentos." },
+    { id: 197, name: "Umbreon", types: ["dark"], desc: "Seus anéis brilham durante a noite." },
+    { id: 470, name: "Leafeon", types: ["grass"], desc: "Seu corpo realiza fotossíntese." },
+    { id: 471, name: "Glaceon", types: ["ice"], desc: "Consegue criar cristais de gelo." },
+    { id: 700, name: "Sylveon", types: ["fairy"], desc: "Usa suas fitas para transmitir tranquilidade." }
 ];
 
-
-const typeNames = {
+var typeNames = {
     normal: "Normal",
     fire: "Fogo",
     water: "Água",
@@ -42,145 +40,184 @@ const typeNames = {
     ground: "Terrestre",
     flying: "Voador",
     psychic: "Psíquico",
-    bug: "Inseto",
-    rock: "Pedra",
     ghost: "Fantasma",
-    dragon: "Dragão",
     dark: "Sombrio",
-    steel: "Aço",
     fairy: "Fada"
 };
 
 function typeBadges(types) {
-    return types.map(type =>
-        `<span class="type-badge type-${type}">
-            ${typeNames[type] || type}
-        </span>`
-    ).join("");
+    var badges = "";
+
+    for (var i = 0; i < types.length; i++) {
+        badges += '<span class="type-badge type-' + types[i] + '">';
+        badges += typeNames[types[i]];
+        badges += '</span>';
+    }
+
+    return badges;
 }
 
 function pokemonCard(pokemon) {
-    return `
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-            <article class="card pokemon-card">
-                <div class="pokemon-art">
-                    <img
-                        loading="lazy"
-                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png"
-                        alt="${pokemon.name}"
-                        onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png'">
-                </div>
+    var numero = pokemon.id;
 
-                <div class="card-body">
-                    <div class="pokemon-number">
-                        Nº ${String(pokemon.id).padStart(3, "0")}
-                    </div>
+    if (numero < 10) {
+        numero = "00" + numero;
+    } else if (numero < 100) {
+        numero = "0" + numero;
+    }
 
-                    <h3 class="pokemon-name h4">${pokemon.name}</h3>
+    var card = "";
 
-                    <div class="mb-3">
-                        ${typeBadges(pokemon.types)}
-                    </div>
+    card += '<div class="col-12 col-sm-6 col-lg-4 col-xl-4">';
+    card += '<article class="card pokemon-card">';
 
-                    <p class="text-secondary small">${pokemon.desc}</p>
+    card += '<div class="pokemon-art">';
+    card += '<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pokemon.id + '.png" alt="' + pokemon.name + '">';
+    card += '</div>';
 
-                    <button
-                        class="btn btn-outline-primary rounded-pill fw-bold"
-                        onclick="showPokemonInfo(${pokemon.id})">
-                        Ver detalhes
-                    </button>
-                </div>
-            </article>
-        </div>
-    `;
+    card += '<div class="card-body">';
+    card += '<div class="pokemon-number">Nº ' + numero + '</div>';
+    card += '<h3 class="pokemon-name h4">' + pokemon.name + '</h3>';
+
+    card += '<div class="mb-3">';
+    card += typeBadges(pokemon.types);
+    card += '</div>';
+
+    card += '<p class="text-secondary small">' + pokemon.desc + '</p>';
+
+    card += '<button class="btn btn-outline-primary rounded-pill fw-bold" onclick="showPokemonInfo(' + pokemon.id + ')">';
+    card += 'Ver detalhes';
+    card += '</button>';
+
+    card += '</div>';
+    card += '</article>';
+    card += '</div>';
+
+    return card;
 }
 
 function setupPokedex() {
-    const grid = document.getElementById("pokemonGrid");
+    var grid = document.getElementById("pokemonGrid");
+    var search = document.getElementById("pokemonSearch");
+    var type = document.getElementById("typeFilter");
+    var count = document.getElementById("resultCount");
 
-    if (!grid) return;
-
-    const search = document.getElementById("pokemonSearch");
-    const type = document.getElementById("typeFilter");
-    const count = document.getElementById("resultCount");
+    if (grid == null) {
+        return;
+    }
 
     function render() {
-        const term = search.value.trim().toLowerCase();
-        const selectedType = type.value;
+        var nome = search.value.toLowerCase();
+        var tipo = type.value;
 
-        const results = pokemonList.filter(pokemon => {
-            const matchesName = pokemon.name.includes(term);
-            const matchesType =
-                selectedType === "" ||
-                pokemon.types.includes(selectedType);
+        var resultado = "";
+        var quantidade = 0;
 
-            return matchesName && matchesType;
-        });
+        for (var i = 0; i < pokemonList.length; i++) {
+            var pokemon = pokemonList[i];
 
-        grid.innerHTML = results.map(pokemonCard).join("");
+            var nomeEncontrado = pokemon.name.toLowerCase().indexOf(nome) != -1;
+            var tipoEncontrado = false;
 
-        count.textContent =
-            `${results.length} Pokémon encontrados`;
+            if (tipo == "") {
+                tipoEncontrado = true;
+            }
 
-        if (results.length === 0) {
-            grid.innerHTML = `
-                <div class="col-12">
-                    <div class="alert alert-warning">
-                        Nenhum Pokémon encontrado.
-                        Tente outro nome ou tipo.
-                    </div>
-                </div>
-            `;
+            for (var j = 0; j < pokemon.types.length; j++) {
+                if (pokemon.types[j] == tipo) {
+                    tipoEncontrado = true;
+                }
+            }
+
+            if (nomeEncontrado && tipoEncontrado) {
+                resultado += pokemonCard(pokemon);
+                quantidade++;
+            }
+        }
+
+        grid.innerHTML = resultado;
+        count.innerHTML = quantidade + " Pokémon encontrados";
+
+        if (quantidade == 0) {
+            grid.innerHTML = '<div class="col-12"><p>Nenhum Pokémon encontrado.</p></div>';
         }
     }
 
-    search.addEventListener("input", render);
-    type.addEventListener("change", render);
+    search.onkeyup = render;
+    type.onchange = render;
 
     render();
 }
 
 function showPokemonInfo(id) {
-    const pokemon = pokemonList.find(item => item.id === id);
-    const area = document.getElementById("pokemonInfo");
+    var pokemon = null;
 
-    if (!pokemon || !area) return;
+    for (var i = 0; i < pokemonList.length; i++) {
+        if (pokemonList[i].id == id) {
+            pokemon = pokemonList[i];
+        }
+    }
 
-    area.innerHTML = `
-        <div class="alert alert-primary d-flex align-items-center gap-3"
-             role="status" aria-live="polite">
+    if (pokemon == null) {
+        return;
+    }
 
-            <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"
-                alt="${pokemon.name}"
-                width="72"
-                height="72">
+    var area = document.getElementById("pokemonInfo");
+    var info = "";
 
-            <div>
-                <h3 class="h5 fw-bold text-capitalize">
-                    ${pokemon.name}
-                </h3>
+    info += '<div class="alert alert-primary d-flex align-items-center gap-3">';
+    info += '<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokemon.id + '.png" width="72" height="72" alt="' + pokemon.name + '">';
 
-                <p class="mb-2">${pokemon.desc}</p>
+    info += '<div>';
+    info += '<h3 class="h5 fw-bold">' + pokemon.name + '</h3>';
+    info += '<p>' + pokemon.desc + '</p>';
+    info += typeBadges(pokemon.types);
+    info += '</div>';
 
-                ${typeBadges(pokemon.types)}
-            </div>
+    info += '<button class="btn-close ms-auto" onclick="document.getElementById(\'pokemonInfo\').innerHTML = \'\'"></button>';
 
-            <button
-                class="btn-close ms-auto"
-                aria-label="Fechar informações"
-                onclick="document.getElementById('pokemonInfo').innerHTML=''">
-            </button>
-        </div>
-    `;
+    info += '</div>';
 
-    area.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
+    area.innerHTML = info;
+    area.scrollIntoView();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = function() {
     setupPokedex();
-    setupQuiz();
-});
+};
+
+function filterLegendary() {
+
+    var search = document.getElementById("legendarySearch").value.toLowerCase();
+    var type = document.getElementById("legendaryType").value;
+
+    var pokemons = document.getElementsByClassName("legendary-item");
+
+    var count = 0;
+
+    for (var i = 0; i < pokemons.length; i++) {
+
+        var name = pokemons[i].getAttribute("data-name");
+        var types = pokemons[i].getAttribute("data-types");
+
+        if (name.indexOf(search) != -1 && (type == "" || types.indexOf(type) != -1)) {
+
+            pokemons[i].style.display = "";
+            count++;
+
+        } else {
+
+            pokemons[i].style.display = "none";
+
+        }
+    }
+
+    document.getElementById("legendaryCount").innerHTML =
+        count + " Pokémon encontrados";
+
+    if (count == 0) {
+        document.getElementById("noLegendary").style.display = "block";
+    } else {
+        document.getElementById("noLegendary").style.display = "none";
+    }
+}
